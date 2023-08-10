@@ -1,0 +1,213 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1664122610cf4bc93c": {
+      "type": "image-with-text",
+      "blocks": {
+        "1664122610b8e2e593-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact us",
+            "heading_size": "h1"
+          }
+        },
+        "1664122610b8e2e593-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please, feel free to contact us if you have any questions about our products or services, the terms and conditions for order fulfillment, and the possibility of producing a non-standard product. <\/p><p>We will be glad to help you.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "1664122610b8e2e593-0",
+        "1664122610b8e2e593-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Thank_you_card_Contuct_Us.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1664122596ab58f997": {
+      "type": "rich-text",
+      "blocks": {
+        "166412259669e1bca4-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Send us a message",
+            "heading_size": "h2"
+          }
+        },
+        "166412259669e1bca4-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please, send us a message and we will reply to the email provided during 1-8 business hours<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "166412259669e1bca4-0",
+        "166412259669e1bca4-1"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "166412296788275553": {
+      "type": "apps",
+      "blocks": {
+        "396dcadb-0932-4afa-8686-c02bd3287650": {
+          "type": "shopify:\/\/apps\/theme-blocks-plus-by-sktch-io\/blocks\/spacer\/4959f958-a614-4d73-add9-fc38222c9217",
+          "settings": {
+            "height": 20
+          }
+        }
+      },
+      "block_order": [
+        "396dcadb-0932-4afa-8686-c02bd3287650"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16641228739bda998b": {
+      "type": "apps",
+      "blocks": {
+        "fd18244d-7895-4545-bc4f-a53288c7daac": {
+          "type": "shopify:\/\/apps\/acerill-form-builder\/blocks\/custom-form\/830f910d-3579-44cb-9d18-92197bb5bd98",
+          "settings": {
+            "formId": "ad4f22c9-110a-461d-af32-1d14fc6f04c3",
+            "behavior": "standard"
+          }
+        }
+      },
+      "block_order": [
+        "fd18244d-7895-4545-bc4f-a53288c7daac"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1664122646411e0bac": {
+      "type": "rich-text",
+      "blocks": {
+        "166412264667377607-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact us via messengers or social media",
+            "heading_size": "h2"
+          }
+        },
+        "166412264667377607-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please, use a convenient way for you to be in touch. Tap on the icon.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "166412264667377607-0",
+        "166412264667377607-1"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "1664137115a39536ef": {
+      "type": "apps",
+      "blocks": {
+        "95d0be11-2fd3-4f17-8df3-6a9d28adc592": {
+          "type": "shopify:\/\/apps\/theme-blocks-plus-by-sktch-io\/blocks\/map\/4959f958-a614-4d73-add9-fc38222c9217",
+          "disabled": true,
+          "settings": {
+            "apiKey": "",
+            "address": "Kiev, Ukraine, Dubrovitskaya, 28",
+            "mode": "marker-roadmap",
+            "zoom": 12,
+            "height": 400,
+            "width": 800,
+            "fullWidth": true
+          }
+        }
+      },
+      "block_order": [
+        "95d0be11-2fd3-4f17-8df3-6a9d28adc592"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1664137985506646ba": {
+      "type": "rich-text",
+      "blocks": {
+        "16641379854b619ff8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Operating Hours:",
+            "heading_size": "h2"
+          }
+        },
+        "16641379854b619ff8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Monday to Friday 2:00 am - 12:00 am EST, <\/p><p><em>(9:00 am - 7:00 pm GMT+2)<\/em><\/p><p>Saturday and Sunday: closed<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16641379854b619ff8-0",
+        "16641379854b619ff8-1"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form",
+    "1664122610cf4bc93c",
+    "1664122596ab58f997",
+    "166412296788275553",
+    "16641228739bda998b",
+    "1664122646411e0bac",
+    "1664137115a39536ef",
+    "1664137985506646ba"
+  ]
+}

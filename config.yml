@@ -1,0 +1,9 @@
+development:
+  password: shptka_3273e7ea6738bcab2a4baaa44d8ec419
+  theme_id: "130574319756"
+  store: bcardscreation.myshopify.com
+  ignore_files:
+    # - config/settings_data.json
+    # - config/settings_schema.json
+
+    # 130574319756

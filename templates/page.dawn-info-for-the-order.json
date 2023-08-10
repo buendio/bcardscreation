@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1655318997f5ab01f1": {
+      "type": "image-banner",
+      "blocks": {
+        "1655318997956bc4ce-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "1655318997956bc4ce-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "1655318997956bc4ce-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1655318997956bc4ce-0",
+        "1655318997956bc4ce-1",
+        "1655318997956bc4ce-2"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1655316991010059c5": {
+      "type": "apps",
+      "blocks": {
+        "45385730-1a9d-4cab-bf8b-54358b2984d8": {
+          "type": "shopify:\/\/apps\/acerill-form-builder\/blocks\/custom-form\/830f910d-3579-44cb-9d18-92197bb5bd98",
+          "settings": {
+            "formId": "9f014b95-1bbc-469d-8cc7-c2794682bedd",
+            "behavior": "set-line-item-properties"
+          }
+        }
+      },
+      "block_order": [
+        "45385730-1a9d-4cab-bf8b-54358b2984d8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1655318997f5ab01f1",
+    "1655316991010059c5"
+  ]
+}

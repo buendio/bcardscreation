@@ -1,0 +1,433 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "6d7c0704-c892-4a2c-bae5-033cd5f37e19": {
+          "type": "shopify:\/\/apps\/acerill-form-builder\/blocks\/custom-form\/830f910d-3579-44cb-9d18-92197bb5bd98",
+          "disabled": true,
+          "settings": {
+            "formId": "",
+            "behavior": "set-line-item-properties"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specification",
+            "icon": "ruler",
+            "content": "<p><strong>Size: <\/strong>{{ product.metafields.Size.Size.value }}<\/p><p><strong>Material:<\/strong> {{ product.metafields.Material.Material.value }}<\/p><p><strong>Print: <\/strong>{{ product.metafields.Print.Print.value }}<\/p><p><strong>Foiling:<\/strong> {{ product.metafields.Foiling.Foiling.value }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": "dawn-shipping-metafield"
+          }
+        },
+        "d3b3aee7-9e7c-4c69-b8ce-402d0644d5d3": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<br> • Customize every single detail <br> • Worldwide shipping <br> • Own factory with high-end printing machines <br> • Guaranteed safe checkout"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "6d7c0704-c892-4a2c-bae5-033cd5f37e19",
+        "description",
+        "collapsible-row-2",
+        "collapsible-row-1",
+        "d3b3aee7-9e7c-4c69-b8ce-402d0644d5d3",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 24
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1655316343aaa5c7ca": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "What does \"Raised Foil\" mean?",
+            "heading_size": "h2"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Raised foil<\/strong> is a unique printing technique that involves the application of <em><strong>metallic foil<\/strong><\/em> to select areas of a design, causing them to be <em><strong>slightly elevated<\/strong><\/em>, creating a tactile, shiny effect. This not only enhances visual appeal but also introduces a <em><strong>textured feel. <\/strong><\/em><\/p><p>We take this technique a step further by offering the option to incorporate<strong> <\/strong><em><strong>multiple foil colors on a single<\/strong><\/em><em> <\/em><em><strong>sheet<\/strong><\/em>, truly making your custom stickers stand out with depth, shine, and color diversity.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Raised_Foils_Sample.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clear_Vinyl_Material_sample_Sticker.jpg",
+            "title": "Transparent Vinyl",
+            "text": "<p>Clear water-resistant self-adhesive film.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_vinyl_Material_sample_Sticker.jpg",
+            "title": "White Vinyl",
+            "text": "<p>White water-resistant self-adhesive film.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "3b77f09b-3b09-4390-a1a6-9eb6bddae0ac": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Glossy_Finish_Sample.jpg",
+            "title": "Glossy finish",
+            "text": "<p>Shiny and reflective surface <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "4c04d85c-1da0-4191-b983-9de88837e55c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Matte_Finish_Sample.jpg",
+            "title": "Matte finish",
+            "text": "<p>Smooth and non-reflective<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "8b839b3a-3678-4e96-a9fe-820aa3f76f09": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Soft_touch_Finish_Sample.jpg",
+            "title": "Soft-touch finish",
+            "text": "<p>Velvety, smooth texture, a matte appearance<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1",
+        "3b77f09b-3b09-4390-a1a6-9eb6bddae0ac",
+        "4c04d85c-1da0-4191-b983-9de88837e55c",
+        "8b839b3a-3678-4e96-a9fe-820aa3f76f09"
+      ],
+      "settings": {
+        "title": "Materials and finish",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "165774565792520867": {
+      "type": "rich-text",
+      "blocks": {
+        "1657745657ff9a3d1c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Design Samples for Raised Foil Stickers",
+            "heading_size": "h2"
+          }
+        },
+        "1657745657ff9a3d1c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Feel free to reference the design sample number when submitting details for our free design service.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1657745657ff9a3d1c-0",
+        "1657745657ff9a3d1c-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "165774449728635b30": {
+      "type": "apps",
+      "blocks": {
+        "702cfe14-86bb-4b40-9a31-885813c77532": {
+          "type": "shopify:\/\/apps\/cozy-image-gallery\/blocks\/Cozy_Gallery_Block\/9808695d-eb84-434d-80d6-cfbcef2d7548",
+          "settings": {
+            "cz_img_gallery_code": "<div class=\"cz-embed-gallery cozy-gallery-lazy-load\" id=\"cz-embed-gallery48484\">\n<!-- ALWAYS KEEP THIS EMPTY -->\n<\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "702cfe14-86bb-4b40-9a31-885813c77532"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16911417440f94b3f9": {
+      "type": "apps",
+      "blocks": {
+        "003c3fc3-3876-4a41-8764-c53c430fd0f5": {
+          "type": "shopify:\/\/apps\/yanet-professional-faq-page\/blocks\/app-block\/b70c1465-6820-4911-8d5d-2299efd66134",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "003c3fc3-3876-4a41-8764-c53c430fd0f5"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16560171495914d67c": {
+      "type": "rich-text",
+      "blocks": {
+        "165601714878b4a1af-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Still have questions?",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "165601714878b4a1af-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "1656016406dc14dbf9": {
+      "type": "apps",
+      "blocks": {
+        "702e2e30-a1d4-4e84-801f-50d228df4c55": {
+          "type": "shopify:\/\/apps\/acerill-form-builder\/blocks\/custom-form\/830f910d-3579-44cb-9d18-92197bb5bd98",
+          "settings": {
+            "formId": "1df704a7-91a8-499e-9421-947c94bef6ed",
+            "behavior": "standard"
+          }
+        }
+      },
+      "block_order": [
+        "702e2e30-a1d4-4e84-801f-50d228df4c55"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "165601760788539abf": {
+      "type": "apps",
+      "blocks": {
+        "0c9c6801-5fb8-4449-be10-c72a2fd14a99": {
+          "type": "shopify:\/\/apps\/theme-blocks-plus-by-sktch-io\/blocks\/spacer\/4959f958-a614-4d73-add9-fc38222c9217",
+          "settings": {
+            "height": 25
+          }
+        }
+      },
+      "block_order": [
+        "0c9c6801-5fb8-4449-be10-c72a2fd14a99"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "165601737945959b30": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 8
+      }
+    },
+    "165541320266c8f38c": {
+      "type": "apps",
+      "blocks": {
+        "cbe84b99-5401-456b-b97f-a6f0caf2a041": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1200
+          }
+        },
+        "ddc033ab-650d-4e44-822b-389c6953c407": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "cbe84b99-5401-456b-b97f-a6f0caf2a041",
+        "ddc033ab-650d-4e44-822b-389c6953c407"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "1655316343aaa5c7ca",
+    "image-with-text",
+    "multicolumn",
+    "165774565792520867",
+    "165774449728635b30",
+    "16911417440f94b3f9",
+    "16560171495914d67c",
+    "1656016406dc14dbf9",
+    "165601760788539abf",
+    "165601737945959b30",
+    "165541320266c8f38c"
+  ]
+}

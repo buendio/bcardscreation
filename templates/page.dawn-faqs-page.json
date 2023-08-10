@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "16589281211c3e63e9": {
+      "type": "rich-text",
+      "blocks": {
+        "1658928121c09bef8a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ page",
+            "heading_size": "h1"
+          }
+        },
+        "1658928121c09bef8a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1658928121c09bef8a-0",
+        "1658928121c09bef8a-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "16589281211c3e63e9",
+    "main"
+  ]
+}

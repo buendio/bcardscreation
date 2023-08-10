@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-2"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1689062507172821ec": {
+      "type": "apps",
+      "blocks": {
+        "d8d0a715-ecbd-46ab-a0a2-55f2f2899bd4": {
+          "type": "shopify:\/\/apps\/cozy-image-gallery\/blocks\/Cozy_Gallery_Block\/9808695d-eb84-434d-80d6-cfbcef2d7548",
+          "disabled": true,
+          "settings": {
+            "cz_img_gallery_code": "Enter Gallery E<div class=\"cz-embed-gallery cozy-gallery-lazy-load\" id=\"cz-embed-gallery40903\">\n<!-- ALWAYS KEEP THIS EMPTY -->\n<\/div>mbed Code"
+          }
+        }
+      },
+      "block_order": [
+        "d8d0a715-ecbd-46ab-a0a2-55f2f2899bd4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1689062507172821ec"
+  ]
+}

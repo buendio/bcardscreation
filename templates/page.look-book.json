@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "16562739841945b456": {
+      "type": "rich-text",
+      "blocks": {
+        "16562739843f6ceab1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plastic Cards",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "16562739843f6ceab1-0"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "16562728237d50defe": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"cz-embed-gallery cozy-gallery-lazy-load\" id=\"cz-embed-gallery40837\">\n<!-- ALWAYS KEEP THIS EMPTY -->\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "92b963d6-40f6-477f-a132-2edefb90fd0e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15271894220940__92b963d6-40f6-477f-a132-2edefb90fd0e-1674473671055a8eff-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have a question?",
+            "heading_size": "h1"
+          }
+        },
+        "template--15271894220940__92b963d6-40f6-477f-a132-2edefb90fd0e-1674473671055a8eff-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please get in touch with us in a way convenient for you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15271894220940__92b963d6-40f6-477f-a132-2edefb90fd0e-1674473671055a8eff-0",
+        "template--15271894220940__92b963d6-40f6-477f-a132-2edefb90fd0e-1674473671055a8eff-1"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16562739841945b456",
+    "16562728237d50defe",
+    "92b963d6-40f6-477f-a132-2edefb90fd0e"
+  ]
+}

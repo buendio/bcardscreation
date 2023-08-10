@@ -1,0 +1,633 @@
+{
+  "sections": {
+    "6ac28b18-334e-44dd-a775-6c64fc3df8f4": {
+      "type": "kava-hero-mia-01",
+      "blocks": {
+        "template--16008383955084__6ac28b18-334e-44dd-a775-6c64fc3df8f4-subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "subheading_text": "STICKERS & LABELS"
+          }
+        },
+        "template--16008383955084__6ac28b18-334e-44dd-a775-6c64fc3df8f4-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Raised Foil \nSticker Sheets",
+            "heading_tag": "h2"
+          }
+        },
+        "template--16008383955084__6ac28b18-334e-44dd-a775-6c64fc3df8f4-text-1": {
+          "type": "text",
+          "settings": {
+            "section_text": "<p>Custom product. <\/p><p>Standout, tactile, multi-colored foil stickers.  <\/p><p>Unique for retail, events, or promotions.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16008383955084__6ac28b18-334e-44dd-a775-6c64fc3df8f4-subheading-1",
+        "template--16008383955084__6ac28b18-334e-44dd-a775-6c64fc3df8f4-heading-1",
+        "template--16008383955084__6ac28b18-334e-44dd-a775-6c64fc3df8f4-text-1"
+      ],
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Backround_Raised_Foil_Stickers.jpg",
+        "overlay_off": false,
+        "text_align": "left",
+        "inherit_fonts": false,
+        "text_color": "#ffffff",
+        "section_height": false,
+        "section_padding_top": 50,
+        "section_padding_bottom": 0,
+        "section_padding_top_mobile": 0,
+        "section_padding_bottom_mobile": 0,
+        "container_max_width": 1200,
+        "custom_css": ""
+      }
+    },
+    "70d0e546-3df5-4849-8611-8c589c9729f4": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15994036715660__70d0e546-3df5-4849-8611-8c589c9729f4-16890620045b96ef33-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "What does \"Raised Foil\" mean?",
+            "heading_size": "h2"
+          }
+        },
+        "template--15994036715660__70d0e546-3df5-4849-8611-8c589c9729f4-16890620045b96ef33-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>\"Raised Foil\"<\/strong> is a premium printing technique where <em><strong>metallic foil<\/strong><\/em> is used to elevate select areas of a design. This creates a <em><strong>visually appealing, tactile finish <\/strong><\/em>with a shimmering effect. <\/p><p>We offer the unique option to incorporate <em><strong>multiple foil colors in one design<\/strong><\/em>, adding an extra level of depth and color diversity to your custom stickers.<br\/><\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15994036715660__70d0e546-3df5-4849-8611-8c589c9729f4-16890620045b96ef33-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Explore Design Gallery",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15994036715660__70d0e546-3df5-4849-8611-8c589c9729f4-16890620045b96ef33-0",
+        "template--15994036715660__70d0e546-3df5-4849-8611-8c589c9729f4-16890620045b96ef33-1",
+        "template--15994036715660__70d0e546-3df5-4849-8611-8c589c9729f4-16890620045b96ef33-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Raised_Foils_Sample.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5c14ac6f-ad68-4a8f-81d1-6e7d6ca7c897": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--15994036715660__5c14ac6f-ad68-4a8f-81d1-6e7d6ca7c897-1688850325c8e6fe01-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Explore creative stickers, find yours",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--15994036715660__5c14ac6f-ad68-4a8f-81d1-6e7d6ca7c897-1688850325c8e6fe01-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 16
+      }
+    },
+    "c740656e-7d2d-4ecc-8a2d-8b2102f8a649": {
+      "type": "kava-product-kylie-01",
+      "blocks": {
+        "template--16008383955084__c740656e-7d2d-4ecc-8a2d-8b2102f8a649-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Explore creative stickers, find yours",
+            "heading_tag": "h3"
+          }
+        },
+        "template--16008383955084__c740656e-7d2d-4ecc-8a2d-8b2102f8a649-link-1": {
+          "type": "link",
+          "settings": {
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "template--16008383955084__c740656e-7d2d-4ecc-8a2d-8b2102f8a649-heading-1",
+        "template--16008383955084__c740656e-7d2d-4ecc-8a2d-8b2102f8a649-link-1"
+      ],
+      "settings": {
+        "collection": "plastic-business-cards",
+        "is_fullwidth": false,
+        "section_height": false,
+        "inherit_fonts": false,
+        "text_color": "#262424",
+        "background_color": "#f3f3f3",
+        "accent_color": "#fff0de",
+        "accent_color_text": "#ffffff",
+        "aspect_ratio": "100%",
+        "products_limit": 5,
+        "count": 4,
+        "gutter": 20,
+        "controls": true,
+        "delay": 5000,
+        "autoplay": false,
+        "loop": true,
+        "tax_info": "",
+        "button_text": "Buy now",
+        "sold_out_text": "Sold out",
+        "choose_text": "Choose options",
+        "from_text": "From:",
+        "section_padding_top": 30,
+        "section_padding_bottom": 30,
+        "section_padding_top_mobile": 50,
+        "section_padding_bottom_mobile": 50,
+        "container_max_width": 1120,
+        "custom_class": "",
+        "custom_css": ""
+      }
+    },
+    "8bdfe627-d1c2-43a9-a093-b09863eb0ff4": {
+      "type": "rich-text",
+      "blocks": {
+        "286a972a-9f5f-4863-9ec6-5efea83aa3d0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Features and options",
+            "heading_size": "h1"
+          }
+        },
+        "34acea09-2b80-4d6c-b801-62ad84be1956": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Customize with multiple foil colors for a vibrant, unique look.  Available on a clear or white vinyl base, with three finishing options to suit your preferences.<\/p>"
+          }
+        },
+        "69bce8d5-a589-4ec8-b1a4-31a093a4c812": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "286a972a-9f5f-4863-9ec6-5efea83aa3d0",
+        "34acea09-2b80-4d6c-b801-62ad84be1956",
+        "69bce8d5-a589-4ec8-b1a4-31a093a4c812"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    },
+    "b23ea8b0-75ea-45f0-859e-1210d02e5b31": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--15994036715660__b23ea8b0-75ea-45f0-859e-1210d02e5b31-1689074607f900729f-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Spot_UV.jpg",
+            "title": "Spot UV",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15994036715660__b23ea8b0-75ea-45f0-859e-1210d02e5b31-1689074607f900729f-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Neon.jpg",
+            "title": "Holographic",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15994036715660__b23ea8b0-75ea-45f0-859e-1210d02e5b31-1689074607f900729f-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Gold.jpg",
+            "title": "Gold",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "b0d477a7-49f9-4f92-bede-e16bda4e5bbc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Silver.jpg",
+            "title": "Silver",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f0f2eee0-0cb9-4839-9109-856431baf635": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Red.jpg",
+            "title": "Red",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "adb22a41-6b9a-4398-9071-aa1f4c8f53a4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dark_Blue.jpg",
+            "title": "Dark Blue",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15994036715660__b23ea8b0-75ea-45f0-859e-1210d02e5b31-1689074607f900729f-0",
+        "template--15994036715660__b23ea8b0-75ea-45f0-859e-1210d02e5b31-1689074607f900729f-1",
+        "template--15994036715660__b23ea8b0-75ea-45f0-859e-1210d02e5b31-1689074607f900729f-2",
+        "b0d477a7-49f9-4f92-bede-e16bda4e5bbc",
+        "f0f2eee0-0cb9-4839-9109-856431baf635",
+        "adb22a41-6b9a-4398-9071-aa1f4c8f53a4"
+      ],
+      "settings": {
+        "title": "Raised Foil colors, spot UV coating",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15994036715660__c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a-168907552163a73810-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--15994036715660__c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a-168907552163a73810-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>You may use a combination of up to 3 foil colors in one design <\/strong><\/em><\/p>"
+          }
+        },
+        "template--15994036715660__c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a-168907552163a73810-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15994036715660__c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a-168907552163a73810-0",
+        "template--15994036715660__c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a-168907552163a73810-1",
+        "template--15994036715660__c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a-168907552163a73810-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 20
+      }
+    },
+    "6c704cd2-fac1-4280-8596-3f0e0248d1c3": {
+      "type": "multicolumn",
+      "blocks": {
+        "a734d4ff-e4e7-4133-8baf-eed09e48e4d9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clear_Vinyl_Material_sample_Sticker.jpg",
+            "title": "Transparent Vinyl",
+            "text": "<p>Clear water-resistant self-adhesive film.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "2c4fbdae-4df5-41d6-a7d3-4cb8b1caa00f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/White_vinyl_Material_sample_Sticker.jpg",
+            "title": "White Vinyl",
+            "text": "<p>White water-resistant self-adhesive film.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "2b82a03a-b682-4214-b431-03cb6284f56f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Glossy_Finish_Sample.jpg",
+            "title": "Glossy finish",
+            "text": "<p>Shiny and reflective surface. Felt pen writable surface<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "7c4c0dbf-ae4e-4622-9c35-3f83e883564c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Matte_Finish_Sample.jpg",
+            "title": "Matte finish",
+            "text": "<p>Smooth and non-reflective, pen writable surface<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "38ac3c5f-1be1-4e2c-afd4-0b4486aff748": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Soft_touch_Finish_Sample.jpg",
+            "title": "Soft-touch finish",
+            "text": "<p>Velvety, smooth texture, a matte appearance. Pen writable surface.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a734d4ff-e4e7-4133-8baf-eed09e48e4d9",
+        "2c4fbdae-4df5-41d6-a7d3-4cb8b1caa00f",
+        "2b82a03a-b682-4214-b431-03cb6284f56f",
+        "7c4c0dbf-ae4e-4622-9c35-3f83e883564c",
+        "38ac3c5f-1be1-4e2c-afd4-0b4486aff748"
+      ],
+      "settings": {
+        "title": "Materials and finish",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "e08116f9-cccd-4d3e-a6c0-04b4103bc5b6": {
+      "type": "rich-text",
+      "blocks": {
+        "15c1267a-b0da-490e-a754-f8eb7467fa72": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "699ac6fc-84f7-40bf-9abc-7e938bde756b": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>Any of the finishes must be applied to either material<\/strong><\/em><\/p>"
+          }
+        },
+        "46d950cd-24f4-4aaa-8f8c-2b0ff895ebc2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "15c1267a-b0da-490e-a754-f8eb7467fa72",
+        "699ac6fc-84f7-40bf-9abc-7e938bde756b",
+        "46d950cd-24f4-4aaa-8f8c-2b0ff895ebc2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 20
+      }
+    },
+    "4fa2b2f3-415f-42e8-b9e8-b7bfd37f4704": {
+      "type": "rich-text",
+      "blocks": {
+        "41c66a9d-2d41-4114-b34a-a9351abac512": {
+          "type": "heading",
+          "settings": {
+            "heading": "Explore Diverse Sticker Styles",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "41c66a9d-2d41-4114-b34a-a9351abac512"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 20
+      }
+    },
+    "1689156670cd2fbb0a": {
+      "type": "apps",
+      "blocks": {
+        "fe482720-a94c-413e-915a-7db9f9b04f0d": {
+          "type": "shopify:\/\/apps\/cozy-image-gallery\/blocks\/Cozy_Gallery_Block\/9808695d-eb84-434d-80d6-cfbcef2d7548",
+          "settings": {
+            "cz_img_gallery_code": "<div class=\"cz-embed-gallery cozy-gallery-lazy-load\" id=\"cz-embed-gallery48484\">\n<!-- ALWAYS KEEP THIS EMPTY -->\n<\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "fe482720-a94c-413e-915a-7db9f9b04f0d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "c8138904-ba6c-4d2b-9191-38dfd9ed6992": {
+      "type": "rich-text",
+      "blocks": {
+        "c98ad227-94d1-4749-96ec-b77888ea730f": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore More",
+            "button_link": "shopify:\/\/collections\/raised-foil-stickers-sticker-sheets",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "c98ad227-94d1-4749-96ec-b77888ea730f"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 20
+      }
+    },
+    "f460a46c-1be7-4ebd-a5f0-f50c01e41d08": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "4971076d-57f5-4b72-9558-2b24e50b1974": {
+      "type": "rich-text",
+      "blocks": {
+        "6e0de6f0-b7cb-4b0a-b61f-95eb577ceb2e": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frequently asked questions",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "6e0de6f0-b7cb-4b0a-b61f-95eb577ceb2e"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 16
+      }
+    },
+    "a8e7ae21-7f39-4af3-bc9d-86b5f7f64319": {
+      "type": "collection-list",
+      "blocks": {
+        "template--15994036715660__a8e7ae21-7f39-4af3-bc9d-86b5f7f64319-16891671748a1a1993-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "plastic-business-cards"
+          }
+        },
+        "template--15994036715660__a8e7ae21-7f39-4af3-bc9d-86b5f7f64319-16891671748a1a1993-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "custom-shape-business-cards"
+          }
+        },
+        "template--15994036715660__a8e7ae21-7f39-4af3-bc9d-86b5f7f64319-16891671748a1a1993-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fine-paper-business-cards"
+          }
+        }
+      },
+      "block_order": [
+        "template--15994036715660__a8e7ae21-7f39-4af3-bc9d-86b5f7f64319-16891671748a1a1993-0",
+        "template--15994036715660__a8e7ae21-7f39-4af3-bc9d-86b5f7f64319-16891671748a1a1993-1",
+        "template--15994036715660__a8e7ae21-7f39-4af3-bc9d-86b5f7f64319-16891671748a1a1993-2"
+      ],
+      "settings": {
+        "title": "More to Love: Explore Our Other Products",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "6ac28b18-334e-44dd-a775-6c64fc3df8f4",
+    "70d0e546-3df5-4849-8611-8c589c9729f4",
+    "5c14ac6f-ad68-4a8f-81d1-6e7d6ca7c897",
+    "c740656e-7d2d-4ecc-8a2d-8b2102f8a649",
+    "8bdfe627-d1c2-43a9-a093-b09863eb0ff4",
+    "b23ea8b0-75ea-45f0-859e-1210d02e5b31",
+    "c4fef2f9-7ee6-46b9-8b43-a9b0d4505b0a",
+    "6c704cd2-fac1-4280-8596-3f0e0248d1c3",
+    "e08116f9-cccd-4d3e-a6c0-04b4103bc5b6",
+    "4fa2b2f3-415f-42e8-b9e8-b7bfd37f4704",
+    "1689156670cd2fbb0a",
+    "c8138904-ba6c-4d2b-9191-38dfd9ed6992",
+    "f460a46c-1be7-4ebd-a5f0-f50c01e41d08",
+    "main",
+    "4971076d-57f5-4b72-9558-2b24e50b1974",
+    "a8e7ae21-7f39-4af3-bc9d-86b5f7f64319"
+  ]
+}

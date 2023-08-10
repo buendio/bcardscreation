@@ -1,0 +1,46 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "WhatsApp Msg: +1.929.422.2067 - Business hours:    Mon-Fri: 2:00 am - 11:00 am EST,  (8:00 am - 18:00 pm GMT+2)",
+            "link": ""
+          }
+        },
+        "8fab8765-9754-4874-b6e6-97ffdc27aab4": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free personalized design service for all orders!  |  Free shipping within the USA",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "8fab8765-9754-4874-b6e6-97ffdc27aab4"
+      ],
+      "settings": {}
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "show_line_separator": true,
+        "color_scheme": "accent-1",
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

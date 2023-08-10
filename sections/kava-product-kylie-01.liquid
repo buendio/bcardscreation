@@ -1,0 +1,1202 @@
+
+
+ {% assign sec_id = section.id | slice: -6, 6 | replace: '-', '_' %}
+{% assign sec_id = sec_id | prepend: 'pw' %}
+
+{%- style -%}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pw-container,
+.pw-container-fluid {
+  width: 100%;
+  padding-right: var(--pw-gutter-x, 15px);
+  padding-left: var(--pw-gutter-x, 15px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .pw-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 750px) {
+  .pw-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pw-container {
+    max-width: 960px;
+  }
+  {% if section.settings.container_max_width >= 720 and section.settings.container_max_width <= 960 %}
+    .pw-section__{{sec_id}} .pw-container {
+      max-width: {{section.settings.container_max_width}}px;
+    }
+  {% endif %}
+}
+
+@media (min-width: 1200px) {
+  .pw-container {
+    max-width: 1140px;
+  }
+  {% if section.settings.container_max_width >= 720 and section.settings.container_max_width <= 1140 %}
+    .pw-section__{{sec_id}} .pw-container {
+      max-width: {{section.settings.container_max_width}}px;
+    }
+  {% endif %}
+}
+
+@media (min-width: 1400px) {
+  .pw-container {
+    max-width: 1320px;
+  }
+  {% if section.settings.container_max_width >= 720 and section.settings.container_max_width != 1320 %}
+    .pw-section__{{sec_id}} .pw-container {
+      max-width: {{section.settings.container_max_width}}px;
+    }
+  {% endif %}
+}
+
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.pw-section__{{sec_id}} {
+  --pw-gutter-x: 20px;
+  background-color: {{section.settings.background_color}};
+  padding-top: {{section.settings.section_padding_top}}px;
+  padding-bottom: {{section.settings.section_padding_bottom}}px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pw-section__{{sec_id}} .pw-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pw-section__{{sec_id}} .pw-section-title {
+  color: {{section.settings.text_color}};
+  margin-top: 0;
+}
+
+.pw-section__{{sec_id}} .pw-section-link {
+  margin-bottom: 20px;
+}
+
+.pw-section__{{sec_id}} .pw-section-link a {
+  text-decoration: none;
+  position: relative;
+  color: {{section.settings.text_color}};
+  vertical-align: middle;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.pw-section__{{sec_id}} .pw-section-link a:hover {
+  color: {{section.settings.text_color}};
+  text-decoration: underline;
+}
+
+.pw-section__{{sec_id}} .pw-section-link a::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.7071 5.63616L20.3639 11.293C20.7545 11.6835 20.7545 12.3167 20.3639 12.7072L14.7071 18.3641C14.3166 18.7546 13.6834 18.7546 13.2929 18.3641C12.9023 17.9736 12.9023 17.3404 13.2929 16.9499L17.2426 13.0001H4C3.44772 13.0001 3 12.5524 3 12.0001C3 11.4478 3.44772 11.0001 4 11.0001H17.2426L13.2929 7.05037C12.9023 6.65984 12.9023 6.02668 13.2929 5.63616C13.6834 5.24563 14.3166 5.24563 14.7071 5.63616Z' fill='%{{section.settings.text_color | replace: "#", "23" }}'/%3E%3C/svg%3E%0A");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-top: -3px;
+}
+
+.pw-section__{{sec_id}} .pw-section-link a:empty::after {
+  display: none;
+}
+
+.pw-section__{{sec_id}} .siema-slider-wrapper {
+  position: relative;
+  margin-left: calc( {{section.settings.gutter}}px / 2 * -1);
+  margin-right: calc( {{section.settings.gutter}}px / 2 * -1);
+
+}
+
+.pw-section__{{sec_id}} .pw-slide-outer {
+  padding: 0 calc( {{section.settings.gutter}}px / 2 );
+}
+
+.pw-section__{{sec_id}} .siema-prev,
+.pw-section__{{sec_id}} .siema-next {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+  top: 42%;
+  margin-top: -20px;
+  background-repeat: no-repeat;
+  background-size: 11px 21px;
+  transition: opacity .25s;
+}
+
+.pw-section__{{sec_id}} .siema-prev:hover,
+.pw-section__{{sec_id}} .siema-next:hover {
+  opacity: 0.8;
+}
+
+.pw-section__{{sec_id}} .siema-prev {
+  left: 25px;
+  background-position: 45% center;
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='21' viewBox='0 0 11 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.666673 10.5008C0.666008 10.8415 0.784679 11.1717 1.00209 11.4341L8.29375 20.1841C8.54129 20.4819 8.89699 20.6692 9.28262 20.7048C9.66824 20.7403 10.0522 20.6212 10.35 20.3737C10.6478 20.1262 10.8351 19.7705 10.8707 19.3848C10.9062 18.9992 10.7871 18.6153 10.5396 18.3174L4.00626 10.5008L10.3063 2.68411C10.4274 2.53494 10.5179 2.3633 10.5724 2.17905C10.627 1.99481 10.6447 1.80159 10.6243 1.61051C10.604 1.41943 10.5461 1.23424 10.454 1.06561C10.3619 0.89697 10.2373 0.748203 10.0875 0.627859C9.93756 0.494304 9.76164 0.393156 9.57079 0.330749C9.37993 0.268342 9.17824 0.246026 8.97836 0.265193C8.77847 0.28436 8.5847 0.344598 8.40918 0.442136C8.23366 0.539674 8.08017 0.67241 7.95834 0.832027L0.914591 9.58203C0.731546 9.85194 0.644257 10.1754 0.666673 10.5008Z' fill='%23989898'/%3E%3C/svg%3E");
+}
+
+.pw-section__{{sec_id}} .siema-next {
+  right: 25px;
+  background-position: 55% center;
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='21' viewBox='0 0 11 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.3333 10.5008C10.334 10.8415 10.2153 11.1717 9.99791 11.4341L2.70625 20.1841C2.45871 20.4819 2.10301 20.6692 1.71738 20.7048C1.33176 20.7403 0.947811 20.6212 0.649994 20.3737C0.352179 20.1262 0.164894 19.7705 0.12934 19.3848C0.0937861 18.9992 0.212876 18.6153 0.460411 18.3174L6.99374 10.5008L0.693746 2.68411C0.572608 2.53494 0.482145 2.3633 0.427557 2.17905C0.372969 1.99481 0.355332 1.80159 0.37566 1.61051C0.395988 1.41943 0.453879 1.23424 0.546008 1.06561C0.638136 0.89697 0.762685 0.748203 0.912495 0.627859C1.06244 0.494304 1.23836 0.393156 1.42921 0.330749C1.62007 0.268342 1.82176 0.246026 2.02164 0.265193C2.22153 0.28436 2.4153 0.344598 2.59082 0.442136C2.76634 0.539674 2.91983 0.67241 3.04166 0.832027L10.0854 9.58203C10.2685 9.85194 10.3557 10.1754 10.3333 10.5008Z' fill='%23989898'/%3E%3C/svg%3E");
+}
+
+.pw-section__{{sec_id}} .pw-product-image-wrapper {
+  position: relative;
+  padding-top: {{section.settings.aspect_ratio}};
+  overflow: hidden;
+  display: block;
+}
+
+.pw-section__{{sec_id}} .pw-product-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.25s;
+}
+
+.pw-section__{{sec_id}} .pw-product-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.pw-section__{{sec_id}} .pw-product-model {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pw-section__{{sec_id}} .pw-slide .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pw-section__{{sec_id}} .pw-product-title,
+.pw-section__{{sec_id}} .pw-product-title a {
+  margin-top: 16px;
+  color: {{section.settings.text_color}};
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 0;
+  transition: all 0.25s;
+}
+
+.pw-section__{{sec_id}} .pw-product-title a:hover {
+  color: {{section.settings.accent_color}};
+  text-decoration: none;
+}
+
+.pw-section__{{sec_id}} .pw-current-price,
+.pw-section__{{sec_id}} .price__container {
+  color: {{section.settings.text_color}};
+}
+
+.pw-section__{{sec_id}} .price--on-sale .price-item--regular {
+  color: {{section.settings.text_color}};
+  opacity: 0.5;
+}
+
+.pw-section__{{sec_id}} .pw-product-buttons {
+  padding: 24px;
+  position: absolute;
+  z-index: 1;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.pw-section__{{sec_id}} .pw-product-buttons .pw-btn {
+  width: 100%;
+}
+
+.pw-section__{{sec_id}} .pw-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  background-color: {{section.settings.accent_color}};
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  color: {{section.settings.accent_color_text}};
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  padding: 19px 25px;
+  line-height: 1;
+  min-width: 200px;
+  min-height: 44px;
+  transition: all 0.25s;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+}
+
+.pw-section__{{sec_id}} .pw-btn:hover {
+  text-decoration: none;
+  opacity: 0.8 !important;
+}
+
+.pw-section__{{sec_id}} .pw-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.pw-section__{{sec_id}} .pw-btn[disabled], .pw-section__{{sec_id}} .rte a.pw-btn:not(.btn)[disabled],
+.pw-section__{{sec_id}} .pw-btn[disabled]:hover, .pw-section__{{sec_id}} .rte a.pw-btn:not(.btn)[disabled]:hover {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+
+.pw-section__{{sec_id}} .pw-product-inner:hover .pw-product-buttons {
+  bottom: 0;
+}
+
+.pw-section__{{sec_id}} .pw-product-inner:hover .pw-product-image-wrapper::before {
+  opacity: 1;
+}
+
+{% if section.settings.inherit_fonts == false %}
+  .pw-section__{{sec_id}} h1.pw-section-title {
+    font-size: 56px;
+  }
+  .pw-section__{{sec_id}} h2.pw-section-title {
+    letter-spacing: 0;
+    font-size: 32px;
+  }
+  .pw-section__{{sec_id}} h3.pw-section-title {
+    font-size: 24px;
+  }
+  .pw-section__{{sec_id}} .pw-section-text p {
+    font-size: 20px; 
+    margin-bottom: 20px;
+  }
+  .pw-section__{{sec_id}} .pw-btn {
+    font-size: 14px;
+  }
+  .pw-section__{{sec_id}} .pw-current-price,
+  .pw-section__{{sec_id}} .price__container {
+    font-size: 14px;
+    color: {{section.settings.text_color}};
+  }
+  .pw-section__{{sec_id}} .pw-product-title,
+  .pw-section__{{sec_id}} .pw-product-title a {
+    font-size: 14px;
+  }
+  .pw-section__{{sec_id}} .pw-section-link a {
+    font-size: 16px;
+  }
+{% endif %}
+
+
+{% if section.settings.is_fullwidth == true %}
+.pw-section__{{sec_id}} .pw-container-fluid {
+  max-width: 100%;
+  overflow: hidden;
+}
+{% endif %}
+
+
+{% if section.settings.section_height == true %}
+.pw-section__{{sec_id}} {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+{% endif %}
+
+.pw-section__{{sec_id}} .price.price--unavailable {
+  visibility: hidden;
+}
+
+.pw-section__{{sec_id}} .price--sold-out .price__availability,
+.pw-section__{{sec_id}} .price__regular {
+  display: block;
+}
+
+.pw-section__{{sec_id}} .price__sale,
+.pw-section__{{sec_id}} .price__availability,
+.pw-section__{{sec_id}} .price .price__badge-sale,
+.pw-section__{{sec_id}} .price .price__badge-sold-out,
+.pw-section__{{sec_id}} .price--on-sale .price__regular,
+.pw-section__{{sec_id}} .price--on-sale .price__availability {
+  display: none;
+}
+
+.pw-section__{{sec_id}} .price--sold-out .price__badge-sold-out,
+.pw-section__{{sec_id}} .price--on-sale .price__badge-sale {
+  display: inline-block;
+}
+
+.pw-section__{{sec_id}} .price--on-sale .price__sale {
+  display: initial;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pw-section__{{sec_id}} .hidden {
+    display: none !important;
+}
+
+.pw-section__{{sec_id}} .pw-tax-info {
+  color: {{section.settings.text_color}};
+  margin-top: -3px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .pw-section__{{sec_id}} .pw-btn {
+    min-width: 160px;
+  }
+  {% if section.settings.inherit_fonts == false %}
+    .pw-section__{{sec_id}} h2.pw-section-title {
+      font-size: 24px;
+    }
+  {% endif %}
+}
+
+@media only screen and (max-width: 1024px) {
+  {% if section.settings.inherit_fonts == false %}
+    .pw-section__{{sec_id}} h2.pw-section-title {
+      font-size: 20px;
+    }
+  {% endif %}
+}
+
+
+@media only screen and (max-width: 991px) {
+  .pw-section__{{sec_id}} .pw-product-inner .pw-product-buttons {
+    bottom: 0;
+  }
+}
+
+
+@media only screen and (max-width: 749px) {
+  .pw-section__{{sec_id}} {
+    padding-top: {{section.settings.section_padding_top_mobile}}px;
+    padding-bottom: {{section.settings.section_padding_bottom_mobile}}px;
+  }
+  .pw-section__{{sec_id}} .pw-btn {
+    padding: 15px 20px;
+  }
+  .pw-section__{{sec_id}} .pw-product-buttons {
+    padding: 16px;
+  }
+  .pw-section__{{sec_id}} .siema-prev,
+  .pw-section__{{sec_id}} .siema-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background-size: 8px 15px;
+  }
+  {% if section.settings.inherit_fonts == false %}
+    .pw-section__{{sec_id}} h1.pw-section-title {
+      font-size: 40px;
+    }
+    .pw-section__{{sec_id}} h2.pw-section-title {
+      letter-spacing: 0;
+      font-size: 28px;
+    }
+    .pw-section__{{sec_id}} h3.pw-section-title {
+      font-size: 24px;
+    }
+    .pw-section__{{sec_id}} .pw-section-text p {
+      font-size: 18px; margin-bottom: 24px;
+    }
+  {% endif %}
+}
+
+{%- endstyle -%}
+
+{% assign slides_count = 0 %}
+
+{% if section.settings.is_fullwidth == true %}
+  {% assign container = 'pw-container-fluid' %}
+{% else %}
+  {% assign container = 'pw-container' %}
+{% endif %}
+
+
+{% if section.settings.custom_css != blank %}
+  {%- style -%}
+  {{section.settings.custom_css}}
+  {%- endstyle -%}
+{% endif %}
+
+<div class="pw-section__{{sec_id}} {{ section.settings.custom_class }}">
+  <div class="{{container}}">
+
+    <div class="pw-title-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'heading' %}
+            {% if block.settings.heading_text != blank %}
+              <{{ block.settings.heading_tag }} class="pw-section-title" {{ block.shopify_attributes }}>
+                {{ block.settings.heading_text | escape }}
+              </{{ block.settings.heading_tag }}>
+            {% endif %}
+
+          {% when 'link' %}
+            {% if section.settings.collection != blank %}
+              {% assign collection_url = section.settings.collection.url %}
+              {% if block.settings.link_text != blank %}
+                <div class="pw-section-link">
+                  <a href="{{collection_url}}">{{ block.settings.link_text }}</a>
+                </div>
+              {% endif %}
+            {% endif %}
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    {% if section.settings.collection != blank %}
+      {% assign collection = section.settings.collection %}
+
+      {% if collection.products_count != 0 %}
+        <div class="siema-slider-wrapper">
+          <div
+            class="siema"
+            data-count="{{section.settings.count}}"
+            data-controls="{{section.settings.controls}}"
+            data-autoplay="{{section.settings.autoplay}}"
+            data-delay="{{section.settings.delay}}"
+            data-loop="{{section.settings.loop}}"
+          >
+            {% assign limit = section.settings.products_limit %}
+            {% for product in collection.products limit: limit %}
+              {% assign slides_count = slides_count | plus:1 %}
+              <div class="pw-slide-outer" {{ block.shopify_attributes }}>
+                <div class="pw-slide">
+                  <div class="pw-product-inner">
+                    <a href="{{ product.url}}" class="pw-product-image-wrapper">
+                      {% assign featured_media = product.featured_media %}
+                      {% if featured_media == blank %}
+                        <div class="pw-product-image">
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0511/2465/files/Placeholder-06.svg"
+                            alt="product name"
+                          >
+                        </div>
+                      {% else %}
+                        {% case featured_media.media_type %}
+                          {% when 'image' %}
+                            <div
+                              class="pw-product-image"
+                              data-media-id="{{ featured_media.id }}"
+                            >
+                              {{ featured_media | image_url: width: 400 | image_tag }}
+                            </div>
+                          {% when 'external_video' %}
+                            <div
+                              class="pw-product-video"
+                              data-media-id="{{ featured_media.id }}"
+                            >
+                              {{ featured_media | external_video_tag }}
+                            </div>
+                          {% when 'video' %}
+                            <div class="pw-product-video" data-media-id="{{ featured_media.id }}">
+                              {{ featured_media | video_tag: controls: true }}
+                            </div>
+                          {% when 'model' %}
+                            <div
+                              class="pw-product-model"
+                              data-media-id="{{ featured_media.id }}"
+                            >
+                              {{ featured_media | model_viewer_tag }}
+                            </div>
+                          {% else %}
+                            <div
+                              class="pw-product-image"
+                              style="padding-top: 100%;"
+                              data-media-id="{{ featured_media.id }}"
+                            >
+                              {{ featured_media | media_tag }}
+                            </div>
+                        {% endcase %}
+                      {% endif %}
+
+                      {% if product != blank %}
+                        {% if product.has_only_default_variant == true %}
+                        <form action="/cart/add" method="post" class="pw-product-form">
+                          <input
+                            type="hidden"
+                            name="id"
+                            id="{{sec_id}}_product-select"
+                            value="{{ product.selected_or_first_available_variant.id }}"
+                          >
+                          <div class="pw-product-buttons">
+                            <input
+                              type="submit"
+                              id="{{sec_id}}_pw-product-submit"
+                              value="{%- if product.selected_or_first_available_variant.available -%} {{section.settings.button_text}} {%- else -%} {{section.settings.sold_out_text}} {%- endif -%}" 
+                              class="pw-btn {% if section.settings.btn_is_rounded == true %} pw-btn-rounded {% endif %}"
+                              style="background-color: {{section.settings.accent_color}}; color: {{section.settings.accent_color_text}}"
+                              {% if product.selected_or_first_available_variant.available == false %}
+                                disabled
+                              {% endif %}
+                            >
+                          </div>
+                        </form>
+                        {% else %}
+                          <div class="pw-product-buttons">
+                            <div class="pw-btn {% if section.settings.btn_is_rounded == true %} pw-btn-rounded {% endif %}">{{section.settings.choose_text}}</div>
+                          </div>
+                        {% endif %}
+                      {% endif %}
+                    </a>
+
+                    <div class="pw-product-content">
+                      {% if product == blank %}
+                        <h3 class="pw-product-title">Product title</h3>
+                      {% else %}
+                        <h3 class="pw-product-title">
+                          <a href="{{ product.url}}">{{ product.title | escape }}</a>
+                        </h3>
+                      {% endif %}
+
+                      <div class="pw-product-price">
+                        {% if product == blank %}
+                          <div id="price" class="pw-current-price">$99.99</div>
+                        {% else %}
+                          {%- liquid
+                            if use_variant
+                              assign target = product.selected_or_first_available_variant
+                            else
+                              assign target = product
+                            endif
+
+                            assign compare_at_price = target.compare_at_price
+                            assign price = target.price | default: 1999
+                            assign available = target.available | default: false
+                            assign money_price = price | money
+                            if settings.currency_code_enabled
+                              assign money_price = price | money_with_currency
+                            endif
+
+                            if target == product and product.price_varies
+                              assign money_price = section.settings.from_text | append: ' ' | append: money_price
+                            endif
+                          -%}
+
+                          <div
+                            id="{{sec_id}}_price"
+                            class="
+                              price
+                              {%- if price_class %} {{ price_class }}{% endif -%}
+                              {%- if available == false %} price--sold-out {% endif -%}
+                              {%- if compare_at_price > price %} price--on-sale {% endif -%}
+                              {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
+                              {%- if show_badges %} price--show-badge{% endif -%}
+                            "
+                          >
+                            <div class="price__container">
+                              {%- comment -%}
+                                Explanation of description list:
+                                  - div.price__regular: Displayed when there are no variants on sale
+                                  - div.price__sale: Displayed when a variant is a sale
+                              {%- endcomment -%}
+                              <div class="price__regular">
+                                <span class="visually-hidden visually-hidden--inline">Regular price</span>
+                                <span class="price-item price-item--regular">
+                                  {{ money_price }}
+                                </span>
+                              </div>
+                              <div class="price__sale">
+                                {%- unless product.price_varies == false and product.compare_at_price_varies %}
+                                  <span class="visually-hidden visually-hidden--inline">Regular price</span>
+                                  <span>
+                                    <s class="price-item price-item--regular">
+                                      {% if settings.currency_code_enabled %}
+                                        {{ compare_at_price | money_with_currency }}
+                                      {% else %}
+                                        {{ compare_at_price | money }}
+                                      {% endif %}
+                                    </s>
+                                  </span>
+                                {%- endunless -%}
+                                <span class="visually-hidden visually-hidden--inline">Sale price</span>
+                                <span class="price-item price-item--sale price-item--last">
+                                  {{ money_price }}
+                                </span>
+                              </div>
+                              <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
+                                <span class="visually-hidden">Unit price</span>
+                                <span class="price-item price-item--last">
+                                  <span>
+                                    {{- product.selected_or_first_available_variant.unit_price | money -}}
+                                  </span>
+                                  <span aria-hidden="true">/</span>
+                                  <span class="visually-hidden">&nbsp;-&nbsp;</span>
+                                  <span>
+                                    {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value
+                                        != 1
+                                    -%}
+                                      {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+                                    {%- endif -%}
+                                    {{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+                                  </span>
+                                </span>
+                              </small>
+                            </div>
+                          </div>
+                        {% endif %}
+                      </div>
+                      <div class="pw-tax-info">
+                        {{ section.settings.tax_info }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+     
+          {% if section.settings.controls == true %}
+            <button class="siema-prev" data-sec-id="{{sec_id}}">Prev</button>
+            <button class="siema-next" data-sec-id="{{sec_id}}">Next</button>
+          {% endif %}
+        </div>
+      {% else %}
+        {% if request.design_mode == false %}
+          <style>
+            .pw-section__{{sec_id}} {
+              display: none !important;
+            }
+          </style>
+        {% else %}
+          <div class="collection-error-wrapper">
+            <h2>Selected collection doesn't contain available products</h2>
+          </div>
+        {% endif %}
+      {% endif %}
+
+    {% else %}
+      <div class="siema-slider-wrapper">
+        <div
+          class="siema"
+          data-count="{{section.settings.count}}"
+          data-controls="{{section.settings.controls}}"
+          data-autoplay="{{section.settings.autoplay}}"
+          data-delay="{{section.settings.delay}}"
+          data-loop="{{section.settings.loop}}"
+        >
+          {% for i in (1..5) %}
+            <div class="pw-slide-outer" {{ block.shopify_attributes }}>
+              <div class="pw-slide">
+                <div class="pw-product-inner">
+                  <div class="pw-product-image-wrapper">
+                    <div class="pw-product-image">
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0511/2465/files/Placeholder-06.svg"
+                        alt="product name"
+                      >
+                    </div>
+                  </div>
+                  <div class="pw-product-content">
+                    <h3 class="pw-product-title">Product title</h3>
+                    <div class="pw-product-price">
+                      <div id="price" class="pw-current-price">$99.99</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if section.settings.controls == true %}
+          <button class="siema-prev" data-sec-id="{{sec_id}}">Prev</button>
+          <button class="siema-next" data-sec-id="{{sec_id}}">Next</button>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div id="{{sec_id}}-slides-count" data-slides-count="{{ slides_count }}"></div>
+  </div>
+</div>
+
+{% if slides_count == 0 and request.design_mode == false %}
+  <style>
+    .pw-section__{{sec_id}} {
+      display: none !important;
+    }
+  </style>
+{% endif %}
+
+<script>
+  var kylie_js_loaded = true;
+
+  if ( typeof Siema != 'function' ) {
+    // https://pawelgrzybek.github.io/siema/
+    !function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define("Siema",[],t):"object"==typeof exports?exports.Siema=t():e.Siema=t()}("undefined"!=typeof self?self:this,function(){return function(e){function t(r){if(i[r])return i[r].exports;var n=i[r]={i:r,l:!1,exports:{}};return e[r].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var i={};return t.m=e,t.c=i,t.d=function(e,i,r){t.o(e,i)||Object.defineProperty(e,i,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var i=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(i,"a",i),i},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=0)}([function(e,t,i){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(t,"__esModule",{value:!0});var n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},s=function(){function e(e,t){for(var i=0;i<t.length;i++){var r=t[i];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,i,r){return i&&e(t.prototype,i),r&&e(t,r),t}}(),l=function(){function e(t){var i=this;if(r(this,e),this.config=e.mergeSettings(t),this.selector="string"==typeof this.config.selector?document.querySelector(this.config.selector):this.config.selector,null===this.selector)throw new Error("Something wrong with your selector 😭");this.resolveSlidesNumber(),this.selectorWidth=this.selector.offsetWidth,this.innerElements=[].slice.call(this.selector.children),this.currentSlide=this.config.loop?this.config.startIndex%this.innerElements.length:Math.max(0,Math.min(this.config.startIndex,this.innerElements.length-this.perPage)),this.transformProperty=e.webkitOrNot(),["resizeHandler","touchstartHandler","touchendHandler","touchmoveHandler","mousedownHandler","mouseupHandler","mouseleaveHandler","mousemoveHandler","clickHandler"].forEach(function(e){i[e]=i[e].bind(i)}),this.init()}return s(e,[{key:"attachEvents",value:function(){window.addEventListener("resize",this.resizeHandler),this.config.draggable&&(this.pointerDown=!1,this.drag={startX:0,endX:0,startY:0,letItGo:null,preventClick:!1},this.selector.addEventListener("touchstart",this.touchstartHandler),this.selector.addEventListener("touchend",this.touchendHandler),this.selector.addEventListener("touchmove",this.touchmoveHandler),this.selector.addEventListener("mousedown",this.mousedownHandler),this.selector.addEventListener("mouseup",this.mouseupHandler),this.selector.addEventListener("mouseleave",this.mouseleaveHandler),this.selector.addEventListener("mousemove",this.mousemoveHandler),this.selector.addEventListener("click",this.clickHandler))}},{key:"detachEvents",value:function(){window.removeEventListener("resize",this.resizeHandler),this.selector.removeEventListener("touchstart",this.touchstartHandler),this.selector.removeEventListener("touchend",this.touchendHandler),this.selector.removeEventListener("touchmove",this.touchmoveHandler),this.selector.removeEventListener("mousedown",this.mousedownHandler),this.selector.removeEventListener("mouseup",this.mouseupHandler),this.selector.removeEventListener("mouseleave",this.mouseleaveHandler),this.selector.removeEventListener("mousemove",this.mousemoveHandler),this.selector.removeEventListener("click",this.clickHandler)}},{key:"init",value:function(){this.attachEvents(),this.selector.style.overflow="hidden",this.selector.style.direction=this.config.rtl?"rtl":"ltr",this.buildSliderFrame(),this.config.onInit.call(this)}},{key:"buildSliderFrame",value:function(){var e=this.selectorWidth/this.perPage,t=this.config.loop?this.innerElements.length+2*this.perPage:this.innerElements.length;this.sliderFrame=document.createElement("div"),this.sliderFrame.style.width=e*t+"px",this.enableTransition(),this.config.draggable&&(this.selector.style.cursor="-webkit-grab");var i=document.createDocumentFragment();if(this.config.loop)for(var r=this.innerElements.length-this.perPage;r<this.innerElements.length;r++){var n=this.buildSliderFrameItem(this.innerElements[r].cloneNode(!0));i.appendChild(n)}for(var s=0;s<this.innerElements.length;s++){var l=this.buildSliderFrameItem(this.innerElements[s]);i.appendChild(l)}if(this.config.loop)for(var o=0;o<this.perPage;o++){var a=this.buildSliderFrameItem(this.innerElements[o].cloneNode(!0));i.appendChild(a)}this.sliderFrame.appendChild(i),this.selector.innerHTML="",this.selector.appendChild(this.sliderFrame),this.slideToCurrent()}},{key:"buildSliderFrameItem",value:function(e){var t=document.createElement("div");return t.style.cssFloat=this.config.rtl?"right":"left",t.style.float=this.config.rtl?"right":"left",t.style.width=(this.config.loop?100/(this.innerElements.length+2*this.perPage):100/this.innerElements.length)+"%",t.appendChild(e),t}},{key:"resolveSlidesNumber",value:function(){if("number"==typeof this.config.perPage)this.perPage=this.config.perPage;else if("object"===n(this.config.perPage)){this.perPage=1;for(var e in this.config.perPage)window.innerWidth>=e&&(this.perPage=this.config.perPage[e])}}},{key:"prev",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,t=arguments[1];if(!(this.innerElements.length<=this.perPage)){var i=this.currentSlide;if(this.config.loop){if(this.currentSlide-e<0){this.disableTransition();var r=this.currentSlide+this.innerElements.length,n=this.perPage,s=r+n,l=(this.config.rtl?1:-1)*s*(this.selectorWidth/this.perPage),o=this.config.draggable?this.drag.endX-this.drag.startX:0;this.sliderFrame.style[this.transformProperty]="translate3d("+(l+o)+"px, 0, 0)",this.currentSlide=r-e}else this.currentSlide=this.currentSlide-e}else this.currentSlide=Math.max(this.currentSlide-e,0);i!==this.currentSlide&&(this.slideToCurrent(this.config.loop),this.config.onChange.call(this),t&&t.call(this))}}},{key:"next",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1,t=arguments[1];if(!(this.innerElements.length<=this.perPage)){var i=this.currentSlide;if(this.config.loop){if(this.currentSlide+e>this.innerElements.length-this.perPage){this.disableTransition();var r=this.currentSlide-this.innerElements.length,n=this.perPage,s=r+n,l=(this.config.rtl?1:-1)*s*(this.selectorWidth/this.perPage),o=this.config.draggable?this.drag.endX-this.drag.startX:0;this.sliderFrame.style[this.transformProperty]="translate3d("+(l+o)+"px, 0, 0)",this.currentSlide=r+e}else this.currentSlide=this.currentSlide+e}else this.currentSlide=Math.min(this.currentSlide+e,this.innerElements.length-this.perPage);i!==this.currentSlide&&(this.slideToCurrent(this.config.loop),this.config.onChange.call(this),t&&t.call(this))}}},{key:"disableTransition",value:function(){this.sliderFrame.style.webkitTransition="all 0ms "+this.config.easing,this.sliderFrame.style.transition="all 0ms "+this.config.easing}},{key:"enableTransition",value:function(){this.sliderFrame.style.webkitTransition="all "+this.config.duration+"ms "+this.config.easing,this.sliderFrame.style.transition="all "+this.config.duration+"ms "+this.config.easing}},{key:"goTo",value:function(e,t){if(!(this.innerElements.length<=this.perPage)){var i=this.currentSlide;this.currentSlide=this.config.loop?e%this.innerElements.length:Math.min(Math.max(e,0),this.innerElements.length-this.perPage),i!==this.currentSlide&&(this.slideToCurrent(),this.config.onChange.call(this),t&&t.call(this))}}},{key:"slideToCurrent",value:function(e){var t=this,i=this.config.loop?this.currentSlide+this.perPage:this.currentSlide,r=(this.config.rtl?1:-1)*i*(this.selectorWidth/this.perPage);e?requestAnimationFrame(function(){requestAnimationFrame(function(){t.enableTransition(),t.sliderFrame.style[t.transformProperty]="translate3d("+r+"px, 0, 0)"})}):this.sliderFrame.style[this.transformProperty]="translate3d("+r+"px, 0, 0)"}},{key:"updateAfterDrag",value:function(){var e=(this.config.rtl?-1:1)*(this.drag.endX-this.drag.startX),t=Math.abs(e),i=this.config.multipleDrag?Math.ceil(t/(this.selectorWidth/this.perPage)):1,r=e>0&&this.currentSlide-i<0,n=e<0&&this.currentSlide+i>this.innerElements.length-this.perPage;e>0&&t>this.config.threshold&&this.innerElements.length>this.perPage?this.prev(i):e<0&&t>this.config.threshold&&this.innerElements.length>this.perPage&&this.next(i),this.slideToCurrent(r||n)}},{key:"resizeHandler",value:function(){this.resolveSlidesNumber(),this.currentSlide+this.perPage>this.innerElements.length&&(this.currentSlide=this.innerElements.length<=this.perPage?0:this.innerElements.length-this.perPage),this.selectorWidth=this.selector.offsetWidth,this.buildSliderFrame()}},{key:"clearDrag",value:function(){this.drag={startX:0,endX:0,startY:0,letItGo:null,preventClick:this.drag.preventClick}}},{key:"touchstartHandler",value:function(e){-1!==["TEXTAREA","OPTION","INPUT","SELECT"].indexOf(e.target.nodeName)||(e.stopPropagation(),this.pointerDown=!0,this.drag.startX=e.touches[0].pageX,this.drag.startY=e.touches[0].pageY)}},{key:"touchendHandler",value:function(e){e.stopPropagation(),this.pointerDown=!1,this.enableTransition(),this.drag.endX&&this.updateAfterDrag(),this.clearDrag()}},{key:"touchmoveHandler",value:function(e){if(e.stopPropagation(),null===this.drag.letItGo&&(this.drag.letItGo=Math.abs(this.drag.startY-e.touches[0].pageY)<Math.abs(this.drag.startX-e.touches[0].pageX)),this.pointerDown&&this.drag.letItGo){e.preventDefault(),this.drag.endX=e.touches[0].pageX,this.sliderFrame.style.webkitTransition="all 0ms "+this.config.easing,this.sliderFrame.style.transition="all 0ms "+this.config.easing;var t=this.config.loop?this.currentSlide+this.perPage:this.currentSlide,i=t*(this.selectorWidth/this.perPage),r=this.drag.endX-this.drag.startX,n=this.config.rtl?i+r:i-r;this.sliderFrame.style[this.transformProperty]="translate3d("+(this.config.rtl?1:-1)*n+"px, 0, 0)"}}},{key:"mousedownHandler",value:function(e){-1!==["TEXTAREA","OPTION","INPUT","SELECT"].indexOf(e.target.nodeName)||(e.preventDefault(),e.stopPropagation(),this.pointerDown=!0,this.drag.startX=e.pageX)}},{key:"mouseupHandler",value:function(e){e.stopPropagation(),this.pointerDown=!1,this.selector.style.cursor="-webkit-grab",this.enableTransition(),this.drag.endX&&this.updateAfterDrag(),this.clearDrag()}},{key:"mousemoveHandler",value:function(e){if(e.preventDefault(),this.pointerDown){"A"===e.target.nodeName&&(this.drag.preventClick=!0),this.drag.endX=e.pageX,this.selector.style.cursor="-webkit-grabbing",this.sliderFrame.style.webkitTransition="all 0ms "+this.config.easing,this.sliderFrame.style.transition="all 0ms "+this.config.easing;var t=this.config.loop?this.currentSlide+this.perPage:this.currentSlide,i=t*(this.selectorWidth/this.perPage),r=this.drag.endX-this.drag.startX,n=this.config.rtl?i+r:i-r;this.sliderFrame.style[this.transformProperty]="translate3d("+(this.config.rtl?1:-1)*n+"px, 0, 0)"}}},{key:"mouseleaveHandler",value:function(e){this.pointerDown&&(this.pointerDown=!1,this.selector.style.cursor="-webkit-grab",this.drag.endX=e.pageX,this.drag.preventClick=!1,this.enableTransition(),this.updateAfterDrag(),this.clearDrag())}},{key:"clickHandler",value:function(e){this.drag.preventClick&&e.preventDefault(),this.drag.preventClick=!1}},{key:"remove",value:function(e,t){if(e<0||e>=this.innerElements.length)throw new Error("Item to remove doesn't exist 😭");var i=e<this.currentSlide,r=this.currentSlide+this.perPage-1===e;(i||r)&&this.currentSlide--,this.innerElements.splice(e,1),this.buildSliderFrame(),t&&t.call(this)}},{key:"insert",value:function(e,t,i){if(t<0||t>this.innerElements.length+1)throw new Error("Unable to inset it at this index 😭");if(-1!==this.innerElements.indexOf(e))throw new Error("The same item in a carousel? Really? Nope 😭");var r=t<=this.currentSlide>0&&this.innerElements.length;this.currentSlide=r?this.currentSlide+1:this.currentSlide,this.innerElements.splice(t,0,e),this.buildSliderFrame(),i&&i.call(this)}},{key:"prepend",value:function(e,t){this.insert(e,0),t&&t.call(this)}},{key:"append",value:function(e,t){this.insert(e,this.innerElements.length+1),t&&t.call(this)}},{key:"destroy",value:function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=arguments[1];if(this.detachEvents(),this.selector.style.cursor="auto",e){for(var i=document.createDocumentFragment(),r=0;r<this.innerElements.length;r++)i.appendChild(this.innerElements[r]);this.selector.innerHTML="",this.selector.appendChild(i),this.selector.removeAttribute("style")}t&&t.call(this)}}],[{key:"mergeSettings",value:function(e){var t={selector:".siema",duration:200,easing:"ease-out",perPage:1,startIndex:0,draggable:!0,multipleDrag:!0,threshold:20,loop:!1,rtl:!1,onInit:function(){},onChange:function(){}},i=e;for(var r in i)t[r]=i[r];return t}},{key:"webkitOrNot",value:function(){return"string"==typeof document.documentElement.style.transform?"transform":"WebkitTransform"}}]),e}();t.default=l,e.exports=t.default}])});
+  }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get section id
+  let sec_id   = "{{sec_id}}";
+  
+  window['slidesCount__' + sec_id] = {{ slides_count }};
+
+  // Slider and its settigns
+  let slider   = document.querySelector('.pw-section__' + sec_id + ' .siema');
+  let controls = slider.getAttribute('data-controls');
+  let count    = slider.getAttribute('data-count');
+  let autoplay = slider.getAttribute('data-autoplay') === 'true'? true : false;
+  let loop     = slider.getAttribute('data-loop') === 'true'? true : false;
+  let delay    = slider.getAttribute('data-delay');
+  let bp750    = 1;
+  let bp991    = 1;
+  let bp1200   = 1;
+  
+  // Slides on breakpoints
+  if (count == 4) {
+    bp750 = 2;
+    bp991 = 3;
+    bp1200 = 4;
+  } else if (count == 3) {
+    bp750 = 2;
+    bp991 = 3;
+    bp1200 = 3;
+  } else if (count == 2) {
+    bp750 = 2;
+    bp991 = 2;
+    bp1200 = 2;
+  }
+
+  if ( window['slidesCount__' + sec_id] != 0 ) {
+    if ( bp750 > window['slidesCount__' + sec_id] ) {
+      bp750 = window['slidesCount__' + sec_id];
+    }
+    if ( bp991 > window['slidesCount__' + sec_id] ) {
+      bp991 = window['slidesCount__' + sec_id];
+    }
+    if ( bp1200 > window['slidesCount__' + sec_id] ) {
+      bp1200 = window['slidesCount__' + sec_id];
+    }
+  }
+
+  // Initialize slider
+  window['siema__' + sec_id] = new Siema({
+    selector: slider,
+    duration: 500,
+    easing: 'ease-out',
+    perPage: {
+      320: 1,
+      750: bp750,
+      991: bp991,
+      1200: bp1200
+    },
+    startIndex: 0,
+    draggable: true,
+    multipleDrag: true,
+    threshold: 20,
+    loop: loop,
+    rtl: false,
+    onInit: () => {},
+    onChange: () => {},
+  });
+
+  // Controls
+  window['siema_prev__' + sec_id] = document.querySelector('.pw-section__' + sec_id + ' .siema-prev');
+  window['siema_next__' + sec_id] = document.querySelector('.pw-section__' + sec_id + ' .siema-next');
+
+  if (controls == "true" && window['siema_prev__' + sec_id] !== null && window['siema_next__' + sec_id] !== null) {
+    // Add prev event listener
+    window['siema_prev__' + sec_id].addEventListener('click', function(e){
+      var sec_id_n = this.getAttribute('data-sec-id');
+      window['siema__' + sec_id_n].prev();
+    });
+    // Add next event listenter
+    window['siema_next__' + sec_id].addEventListener('click', function(e){
+      var sec_id_n = this.getAttribute('data-sec-id');
+      window['siema__' + sec_id_n].next();
+    });
+  }
+  
+  if (autoplay) {
+    setInterval(function(){
+      window['siema__' + sec_id].next();
+    }, delay);
+  }
+
+});
+
+</script>
+
+{%- if request.design_mode -%}
+  <link rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0511/2465/files/design-mode.css" onload="var kava_script = document.createElement('script'); kava_script.setAttribute('src', 'https://kava-sections-assets.pages.dev/assets/js/kylie-slider.min.js'); document.head.appendChild(kava_script);">
+{%- endif -%}
+
+
+
+{% schema %}
+
+{
+
+  "name": "[Kava] Product-Kylie-01",
+  "tag": "section",
+  "class": "product-kylie product-kylie-01 kylie-slider kava-product-kylie-01",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main settings"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_fullwidth",
+      "default": false,
+      "label": "Full width section"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_height",
+      "default": false,
+      "label": "Full screen height"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_fonts",
+      "default": false,
+      "label": "Inherit font sizes from theme"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#262424"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#ED6F43"
+    },
+    {
+      "type": "color",
+      "id": "accent_color_text",
+      "label": "Text on accent background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "100%",
+          "label": "Square"
+        },
+        {
+          "value": "150%",
+          "label": "Portrait"
+        },
+        {
+          "value": "75%",
+          "label": "4:3"
+        }
+      ],
+      "default": "100%"
+    },
+    {
+      "type": "range",
+      "id": "products_limit",
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "unit": "prd",
+      "label": "Number of products from collection (24 max)",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "count",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "sld",
+      "label": "Slides per page",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "gutter",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Space beеtween slides",
+      "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "controls",
+      "default": true,
+      "label": "Show controls"
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "min": 500,
+      "max": 9500,
+      "step": 500,
+      "unit": "ms",
+      "label": "Autoplay speed",
+      "default": 5000
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "default": false,
+      "label": "Autoplay"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "default": true,
+      "label": "Loop"
+    },
+    {
+      "type": "header",
+      "content": "Texts & localization"
+    },
+    {
+      "type": "text",
+      "id": "tax_info",
+      "label": "Tax info text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Buy now button text",
+      "default": "Buy now",
+      "info": "Shown when product is available and has one variant"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_text",
+      "label": "Buy now 'Sold out' text",
+      "default": "Sold out",
+      "info": "Shown when product is sold out"
+    },
+    {
+      "type": "text",
+      "id": "choose_text",
+      "label": "Choose options button text",
+      "default": "Choose options",
+      "info": "Shown when product has variants"
+    },
+    {
+      "type": "text",
+      "id": "from_text",
+      "label": "Variable price 'From:' text",
+      "default": "From:"
+    },
+    {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Customization"
+    },
+    {
+      "type": "number",
+      "id": "container_max_width",
+      "label": "Container max width",
+      "default": 1320
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom сlass"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Heading",
+      "type": "heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading_text",
+          "label": "Heading text",
+          "default": "Heading text"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ],
+          "default": "h2"
+        }
+      ]
+    },
+    {
+      "name": "Link",
+      "type": "link",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text",
+          "default": "View all"
+        }
+      ]
+    }
+  ]
+,
+"presets": [
+    {
+    "name": "[Kava] Product-Kylie-01",
+    
+  "settings": {
+    "aspect_ratio": "100%"
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "settings": {
+        "heading_text": "Highlight product prominently",
+        "heading_tag": "h2"
+      }
+    },
+    {
+      "type": "link"
+    }
+  ]
+
+    }
+]
+}
+
+{% endschema %}
+                    
